@@ -1,4 +1,4 @@
-const ROUTES = {
+export const ROUTES = {
 
   dashboard: () => viewDashboard(),
 
@@ -47,4 +47,3 @@ function renderView(){
   }
 
 }
-``
