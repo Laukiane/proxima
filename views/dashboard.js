@@ -1,4 +1,4 @@
-function viewDashboard(){
+export function viewDashboard(){
   const role = state.role;
   const meName = currentUserName();
   const visible = visibleDossiers();
