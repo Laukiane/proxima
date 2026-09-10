@@ -1,4 +1,4 @@
-function applyWorkflow(num, to, comment){
+export function applyWorkflow(num, to, comment){
 
   const d =
     DOSSIERS.find(
