@@ -1,2 +1,1 @@
-import { state } from './state.js';
-console.log('STATE =', state);
+throw new Error("TEST APP JS");
