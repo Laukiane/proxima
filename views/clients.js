@@ -1,4 +1,4 @@
-function viewClients(){
+export function viewClients(){
   const q = state.clientSearch.toLowerCase();
   const list = CLIENTS.filter(c=> c.nom.toLowerCase().includes(q) || c.id.toLowerCase().includes(q) || c.ville.toLowerCase().includes(q));
   return `
