@@ -1,0 +1,17 @@
+export const OFFRES = [
+  {id:'OFF-1', nom:'Offre Pneus Été 2026', code:'OP-PNEU-26', nature:'OP', famille:'Pneus', debut:'2026-06-01', fin:'2026-07-31',
+   qteMin:20, caMin:2000, remise:0.10, cumul:false, utilisation:'1 fois / client', statut:'actif',
+   desc:"20 pneus minimum achetés entre le 1er juin et le 31 juillet 2026, chiffre d'affaires minimal 2 000 €."},
+  {id:'OFF-2', nom:'PAPR Juillet — Index 12', code:'PAPR-2026-07-IDX12', nature:'PAPR', indexId:'IDX2', periode:'Juillet 2026',
+   remise:0.20, cumul:false, utilisation:'1 fois / ligne de facture', statut:'actif',
+   desc:"Remise automatique sur les références de l'index 12 pour les achats de juillet 2026."},
+  {id:'OFF-3', nom:'Opération Freinage Sécurité', code:'OP-FREIN-26', nature:'OP', famille:'Freinage', debut:'2026-05-01', fin:'2026-08-31',
+   qteMin:1, caMin:0, remise:0.08, cumul:false, utilisation:'illimitée', statut:'actif',
+   desc:"Remise sur toute pièce de freinage, sans seuil de quantité."},
+  {id:'OFF-4', nom:'Suspension Confort Printemps', code:'OP-SUSP-26', nature:'OP', famille:'Suspension', debut:'2026-03-01', fin:'2026-06-30',
+   qteMin:2, caMin:500, remise:0.12, cumul:false, utilisation:'1 fois / client', statut:'expiré',
+   desc:"Offre close au 30 juin 2026 — conservée pour historique."},
+  {id:'OFF-5', nom:'PAPR Juillet — Index 3 Freinage', code:'PAPR-2026-07-IDX3', nature:'PAPR', indexId:'IDX3', periode:'Juillet 2026',
+   remise:0.08, cumul:false, utilisation:'1 fois / ligne de facture', statut:'actif',
+   desc:"Remise automatique sur les références de l'index 3 pour les achats de juillet 2026."},
+];

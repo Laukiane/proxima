@@ -1,0 +1,18 @@
+export const GAINS = [
+  {id:'G1', nom:'Téléviseur LED 55" 4K', nature:'Boulanger', cat:'Produits', prix:699, fournisseur:'Boulanger', delai:'5-7 jours'},
+  {id:'G2', nom:'Ordinateur portable 15"', nature:'Boulanger', cat:'Produits', prix:849, fournisseur:'Boulanger', delai:'5-7 jours'},
+  {id:'G3', nom:'Smartphone Android 128Go', nature:'Boulanger', cat:'Produits', prix:429, fournisseur:'Boulanger', delai:'3-5 jours'},
+  {id:'G4', nom:'Réfrigérateur combiné', nature:'Boulanger', cat:'Produits', prix:599, fournisseur:'Boulanger', delai:'7-10 jours'},
+  {id:'G5', nom:'Console de jeux nouvelle génération', nature:'Boulanger', cat:'Produits', prix:499, fournisseur:'Boulanger', delai:'5-7 jours'},
+  {id:'G6', nom:'Casque audio sans fil', nature:'Boulanger', cat:'Produits', prix:179, fournisseur:'Boulanger', delai:'3-5 jours'},
+  {id:'G7', nom:'Impression 500 flyers A5', nature:'Autre', cat:'Prestations marketing', prix:180, fournisseur:'Imprimerie Nord', delai:'10 jours'},
+  {id:'G8', nom:'Bâche publicitaire 3x2m', nature:'Autre', cat:'Prestations marketing', prix:260, fournisseur:'Imprimerie Nord', delai:'10 jours'},
+  {id:'G9', nom:'Campagne SMS 2000 contacts', nature:'Autre', cat:'Prestations marketing', prix:320, fournisseur:'AgenceComm', delai:'5 jours'},
+  {id:'G10', nom:'Textile personnalisé (lot de 20)', nature:'Autre', cat:'Prestations marketing', prix:410, fournisseur:'TexPro', delai:'15 jours'},
+  {id:'G11', nom:'Invitation match de football (loge)', nature:'Autre', cat:'Animations', prix:750, fournisseur:'Partenaire Sport Events', delai:'sur date'},
+  {id:'G12', nom:'Places concert x2', nature:'Autre', cat:'Animations', prix:220, fournisseur:'Partenaire Live Nation', delai:'sur date'},
+  {id:'G13', nom:'Voyage / expérience partenaire', nature:'Autre', cat:'Animations', prix:1100, fournisseur:'Partenaire Voyages Pro', delai:'sur devis'},
+  {id:'G14', nom:'Avoir financier 00PR', nature:'00PR', cat:'Versements', prix:1, fournisseur:'Interne', delai:'immédiat', variable:true},
+  {id:'G15', nom:'Versement Glady', nature:'Glady', cat:'Versements', prix:1, fournisseur:'Glady', delai:'48h', variable:true},
+  {id:'G16', nom:'Versement Promostim', nature:'Promostim', cat:'Versements', prix:1, fournisseur:'Promostim', delai:'48h', variable:true},
+];
