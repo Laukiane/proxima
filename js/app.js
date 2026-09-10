@@ -6,6 +6,7 @@ import { applyWorkflow } from './workflow.js';
 import { ROUTES, renderView } from './router.js';
 import { viewDashboard } from '../views/dashboard.js';
 import { viewClients } from '../views/clients.js';
+import { viewDossiers } from '../views/dossiers.js';
 
 console.log("STATE =", state);
 console.log("NB CLIENTS =", CLIENTS.length);
@@ -16,3 +17,4 @@ console.log("ROUTES =", ROUTES);
 console.log("RENDERVIEW =", renderView);
 console.log("DASHBOARD =", viewDashboard);
 console.log("CLIENTS VIEW =", viewClients);
+console.log("DOSSIERS VIEW =", viewDossiers);
