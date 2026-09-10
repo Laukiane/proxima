@@ -1,3 +1,4 @@
+import { viewDashboard } from '../views/dashboard.js';
 export const ROUTES = {
 
   dashboard: () => viewDashboard(),
