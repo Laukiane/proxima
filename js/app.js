@@ -1,1 +1,1 @@
-throw new Error("TEST APP JS");
+document.body.style.border = "10px solid red";
