@@ -27,7 +27,7 @@ export const ROUTES = {
 
 };
 
-function renderView(){
+export function renderView(){
 
   const v =
     document.getElementById('view');
