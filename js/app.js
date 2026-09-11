@@ -14,6 +14,8 @@ import { STATUT_LABELS } from '../data/statuts.js';
 import { findClient } from './utils.js';
 import { REFS } from '../data/refs.js';
 import { findRef } from './utils.js';
+import { INDEXES } from '../data/indexes.js';
+import { idx } from './utils.js';
 
 console.log("STATE =", state);
 console.log("NB CLIENTS =", CLIENTS.length);
@@ -32,3 +34,5 @@ console.log("STATUTS =", STATUT_LABELS);
 console.log("FIND CLIENT =", findClient);
 console.log("NB REFS =", REFS.length);
 console.log("FIND REF =", findRef);
+console.log("NB INDEXES =", INDEXES.length);
+console.log("IDX =", idx);
