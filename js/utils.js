@@ -3,6 +3,7 @@ import { ROLES } from '../data/roles.js';
 import { DOSSIERS } from '../data/dossiers.js';
 import { STATUT_LABELS } from '../data/statuts.js';
 import { CLIENTS } from '../data/clients.js';
+import { REFS } from '../data/refs.js';
 
 function fmtEUR(n){
   return (Math.round(n*100)/100)
@@ -83,3 +84,6 @@ export function dossierTable(list){
 
 export const findClient = id =>
   CLIENTS.find(c => c.id === id);
+
+export const findRef = r =>
+  REFS.find(x => x.ref === r);
