@@ -18,7 +18,7 @@ function fmtEUR(n){
     ) + ' €';
 }
 
-function fmtDate(iso){
+export function fmtDate(iso){
   const [y,m,d] = iso.split('-');
   return `${d}/${m}/${y}`;
 }
