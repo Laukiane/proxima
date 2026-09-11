@@ -5,6 +5,7 @@ import { STATUT_LABELS } from '../data/statuts.js';
 import { CLIENTS } from '../data/clients.js';
 import { REFS } from '../data/refs.js';
 import { INDEXES } from '../data/indexes.js';
+import { EXCEPTIONS_TAUX } from '../data/exceptions-taux.js';
 
 function fmtEUR(n){
   return (Math.round(n*100)/100)
