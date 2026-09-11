@@ -6,6 +6,7 @@ import { viewAdmin } from '../views/admin.js';
 import { viewCatalogue } from '../views/catalogue.js';
 import { viewOffres } from '../views/offres.js';
 import { viewDossierDetail } from '../views/dossier-detail.js';
+import { state } from './state.js';
 export const ROUTES = {
 
   dashboard: () => viewDashboard(),
