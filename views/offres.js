@@ -1,4 +1,4 @@
-function viewOffres(){
+export function viewOffres(){
   return `<div class="page-head"><div><div class="eyebrow">Référentiel</div><h1>Offres & PAPR</h1></div></div>
   <div class="section-title">Offres commerciales</div>
   <div class="card" style="margin-bottom:20px;"><table class="tbl"><thead><tr><th>Code</th><th>Nom</th><th>Nature</th><th>Remise</th><th>Cumul</th><th>Statut</th></tr></thead>
