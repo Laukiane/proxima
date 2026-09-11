@@ -66,3 +66,15 @@ export function visibleDossiers(){
   return list;
 
 }
+
+export function dossierTable(list){
+  return `<table class="tbl"><thead><tr><th>Réf.</th><th>Client</th><th>Créé par</th><th>Date</th><th class="tright">Épargné</th><th class="tright">Versé</th><th>Statut</th></tr></thead>
+  <tbody>${list.map(d=>{
+    const cl = findClient(d.clientId);
+    const [lbl,cls] = STATUT_LABELS[d.statut];
+    return `<tr class="clickable" data-open-dossier="${d.num}">
+      <td class="mono">${d.num}</td><td>${cl?cl.nom:'—'}</td><td>${d.createur||d.chef}</td><td>${fmtDate(d.date)}</td>
+      <td class="tright mono">${fmtEUR(d.totalEpargne)}</td><td class="tright mono">${fmtEUR(d.totalVerse)}</td>
+      <td><span class="badge ${cls}">${lbl}</span></td></tr>`;
+  }).join('')}</tbody></table>`;
+}
