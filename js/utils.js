@@ -4,6 +4,7 @@ import { DOSSIERS } from '../data/dossiers.js';
 import { STATUT_LABELS } from '../data/statuts.js';
 import { CLIENTS } from '../data/clients.js';
 import { REFS } from '../data/refs.js';
+import { INDEXES } from '../data/indexes.js';
 
 function fmtEUR(n){
   return (Math.round(n*100)/100)
