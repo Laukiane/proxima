@@ -7,7 +7,7 @@ import { REFS } from '../data/refs.js';
 import { INDEXES } from '../data/indexes.js';
 import { EXCEPTIONS_TAUX } from '../data/exceptions-taux.js';
 
-function fmtEUR(n){
+export function fmtEUR(n){
   return (Math.round(n*100)/100)
     .toLocaleString(
       'fr-FR',
@@ -23,7 +23,7 @@ export function fmtDate(iso){
   return `${d}/${m}/${y}`;
 }
 
-function esc(s){
+export function esc(s){
   return String(s).replace(
     /[&<>"']/g,
     c => ({
