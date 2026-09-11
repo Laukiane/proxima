@@ -2,6 +2,7 @@ import { state } from '../js/state.js';
 import { CLIENTS } from '../data/clients.js';
 import { OFFRES } from '../data/offres.js';
 import { GAINS } from '../data/gains.js';
+import { ROLES } from '../data/roles.js';
 import {
   currentUserName,
   visibleDossiers,
