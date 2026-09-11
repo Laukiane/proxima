@@ -1,4 +1,4 @@
-function viewCatalogue(){
+export function viewCatalogue(){
   const cats = [...new Set(GAINS.map(g=>g.cat))];
   return `<div class="page-head"><div><div class="eyebrow">Référentiel</div><h1>Catalogue des gains</h1></div></div>
   <div class="alert a-blue">Catalogue de démonstration — produits « Boulanger » et prestataires fictifs, à connecter à un vrai référentiel fournisseur.</div>
