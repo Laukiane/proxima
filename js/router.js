@@ -2,6 +2,10 @@ import { viewDashboard } from '../views/dashboard.js';
 import { viewClients } from '../views/clients.js';
 import { viewDossiers } from '../views/dossiers.js';
 import { viewWizard } from '../views/wizard.js';
+import { viewAdmin } from '../views/admin.js';
+import { viewCatalogue } from '../views/catalogue.js';
+import { viewOffres } from '../views/offres.js';
+import { viewDossierDetail } from '../views/dossier-detail.js';
 export const ROUTES = {
 
   dashboard: () => viewDashboard(),
