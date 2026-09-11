@@ -1,4 +1,4 @@
-function viewFicheClient(id){
+export function viewFicheClient(id){
   const c = findClient(id);
   if(!c) return `<p>Client introuvable.</p>`;
   const dossiersClient = visibleDossiers().filter(d=>d.clientId===id);
