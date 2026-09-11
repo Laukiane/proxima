@@ -12,6 +12,8 @@ import { visibleDossiers } from './utils.js';
 import { dossierTable } from './utils.js';
 import { STATUT_LABELS } from '../data/statuts.js';
 import { findClient } from './utils.js';
+import { REFS } from '../data/refs.js';
+import { findRef } from './utils.js';
 
 console.log("STATE =", state);
 console.log("NB CLIENTS =", CLIENTS.length);
@@ -28,3 +30,5 @@ console.log("VISIBLE DOSSIERS =", visibleDossiers);
 console.log("DOSSIER TABLE =", dossierTable);
 console.log("STATUTS =", STATUT_LABELS);
 console.log("FIND CLIENT =", findClient);
+console.log("NB REFS =", REFS.length);
+console.log("FIND REF =", findRef);
