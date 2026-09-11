@@ -1,3 +1,10 @@
+import {
+  findClient,
+  visibleDossiers,
+  fmtEUR,
+  dossierTable
+} from '../js/utils.js';
+
 export function viewFicheClient(id){
   const c = findClient(id);
   if(!c) return `<p>Client introuvable.</p>`;
