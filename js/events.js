@@ -2,7 +2,11 @@ export function registerEvents(){
 
   document.addEventListener('click', (e)=>{
 
-    console.log('CLICK', e.target);
+    const t = e.target.closest('[data-nav]');
+
+    if(t){
+      console.log('NAV =', t.dataset.nav);
+    }
 
   });
 
