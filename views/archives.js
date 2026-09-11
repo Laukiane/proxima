@@ -1,4 +1,4 @@
-function viewArchives(){
+export function viewArchives(){
   const list = archivedDossiers();
   return `
   <div class="page-head"><div><div class="eyebrow">Audit</div><h1>Dossiers archivés</h1></div></div>
