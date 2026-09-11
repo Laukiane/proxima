@@ -91,3 +91,16 @@ export const findRef = r =>
 
 export const idx = id =>
   INDEXES.find(i => i.id === id);
+
+export const findExceptionTaux = (ref, dateFacture) =>
+  EXCEPTIONS_TAUX.find(ex =>
+    ex.statut === 'actif' &&
+    ex.refs.includes(ref) &&
+    (
+      !ex.periode ||
+      (
+        dateFacture >= ex.periode.debut &&
+        dateFacture <= ex.periode.fin
+      )
+    )
+  );
