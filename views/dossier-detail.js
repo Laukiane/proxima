@@ -2,6 +2,7 @@ import { state } from '../js/state.js';
 import { DOSSIERS } from '../data/dossiers.js';
 import { STATUT_LABELS } from '../data/statuts.js';
 import { CONTROLEURS } from '../data/controleurs.js';
+import { dossierActionsFor } from '../js/workflow.js';
 
 import {
   currentUserName,
