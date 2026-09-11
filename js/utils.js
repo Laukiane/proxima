@@ -87,3 +87,6 @@ export const findClient = id =>
 
 export const findRef = r =>
   REFS.find(x => x.ref === r);
+
+export const idx = id =>
+  INDEXES.find(i => i.id === id);
