@@ -19,7 +19,9 @@ import { idx } from './utils.js';
 import { EXCEPTIONS_TAUX } from '../data/exceptions-taux.js';
 import { findExceptionTaux } from './utils.js';
 import { dossierActionsFor } from './workflow.js';
+import { registerEvents } from './events.js';
 
+registerEvents();
 
 console.log("STATE =", state);
 console.log("NB CLIENTS =", CLIENTS.length);
