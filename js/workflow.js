@@ -1,3 +1,5 @@
+import { STATUT_LABELS } from '../data/statuts.js';
+
 export function applyWorkflow(num, to, comment){
 
   const d =
