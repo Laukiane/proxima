@@ -1,3 +1,6 @@
+import { state } from './state.js';
+import { ROLES } from '../data/roles.js';
+
 function fmtEUR(n){
   return (Math.round(n*100)/100)
     .toLocaleString(
@@ -25,4 +28,10 @@ function esc(s){
       "'":'&#39;'
     }[c])
   );
+}
+
+export function currentUserName(){
+  return ROLES.find(
+    r => r.id === state.role
+  ).name;
 }
