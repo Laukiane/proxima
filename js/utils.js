@@ -2,6 +2,7 @@ import { state } from './state.js';
 import { ROLES } from '../data/roles.js';
 import { DOSSIERS } from '../data/dossiers.js';
 import { STATUT_LABELS } from '../data/statuts.js';
+import { CLIENTS } from '../data/clients.js';
 
 function fmtEUR(n){
   return (Math.round(n*100)/100)
@@ -79,3 +80,6 @@ export function dossierTable(list){
       <td><span class="badge ${cls}">${lbl}</span></td></tr>`;
   }).join('')}</tbody></table>`;
 }
+
+export const findClient = id =>
+  CLIENTS.find(c => c.id === id);
