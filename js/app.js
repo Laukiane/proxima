@@ -7,7 +7,7 @@ import { ROUTES, renderView } from './router.js';
 import { viewDashboard } from '../views/dashboard.js';
 import { viewClients } from '../views/clients.js';
 import { viewDossiers } from '../views/dossiers.js';
-import { viewDossiers } from '../views/dossiers.js';
+import { viewWizard } from '../views/wizard.js';
 
 console.log("STATE =", state);
 console.log("NB CLIENTS =", CLIENTS.length);
@@ -19,4 +19,4 @@ console.log("RENDERVIEW =", renderView);
 console.log("DASHBOARD =", viewDashboard);
 console.log("CLIENTS VIEW =", viewClients);
 console.log("DOSSIERS VIEW =", viewDossiers);
-console.log("DOSSIERS VIEW =", viewDossiers);
+console.log("WIZARD VIEW =", viewWizard);
