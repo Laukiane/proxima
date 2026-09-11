@@ -1,3 +1,11 @@
+import { state } from '../js/state.js';
+import { CLIENTS } from '../data/clients.js';
+
+import {
+  esc,
+  fmtEUR
+} from '../js/utils.js';
+
 export function viewClients(){
   const q = state.clientSearch.toLowerCase();
   const list = CLIENTS.filter(c=> c.nom.toLowerCase().includes(q) || c.id.toLowerCase().includes(q) || c.ville.toLowerCase().includes(q));
