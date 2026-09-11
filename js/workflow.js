@@ -1,3 +1,6 @@
+import { state } from './state.js';
+
+import { CONTROLEURS } from '../data/controleurs.js';
 import { STATUT_LABELS } from '../data/statuts.js';
 
 export function applyWorkflow(num, to, comment){
