@@ -1,6 +1,7 @@
 import { viewDashboard } from '../views/dashboard.js';
 import { viewClients } from '../views/clients.js';
 import { viewDossiers } from '../views/dossiers.js';
+import { viewWizard } from '../views/wizard.js';
 export const ROUTES = {
 
   dashboard: () => viewDashboard(),
