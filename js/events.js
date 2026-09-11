@@ -1,15 +1,13 @@
 export function registerEvents(){
 
-  console.log('EVENTS OK');
+  document.addEventListener('click', (e)=>{
 
-  setTimeout(() => {
+    const t = e.target.closest('[data-nav-to]');
 
-    document.addEventListener('click', () => {
-      console.log('CLICK TEST');
-    });
+    if(t){
+      console.log('NAV TO =', t.dataset.navTo);
+    }
 
-    console.log('LISTENER REGISTERED');
-
-  }, 1000);
+  });
 
 }
