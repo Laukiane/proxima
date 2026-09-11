@@ -10,6 +10,7 @@ import { viewDossiers } from '../views/dossiers.js';
 import { viewWizard } from '../views/wizard.js';
 import { visibleDossiers } from './utils.js';
 import { dossierTable } from './utils.js';
+import { STATUT_LABELS } from '../data/statuts.js';
 
 console.log("STATE =", state);
 console.log("NB CLIENTS =", CLIENTS.length);
@@ -24,3 +25,4 @@ console.log("DOSSIERS VIEW =", viewDossiers);
 console.log("WIZARD VIEW =", viewWizard);
 console.log("VISIBLE DOSSIERS =", visibleDossiers);
 console.log("DOSSIER TABLE =", dossierTable);
+console.log("STATUTS =", STATUT_LABELS);
