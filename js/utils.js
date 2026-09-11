@@ -36,3 +36,33 @@ export function currentUserName(){
     r => r.id === state.role
   ).name;
 }
+
+export function visibleDossiers(){
+
+  const role = state.role;
+
+  const meName = currentUserName();
+
+  let list = DOSSIERS.filter(
+    d =>
+      (d.statut !== 'brouillon' || d.createur === meName)
+      && d.statut !== 'archive'
+  );
+
+  if(role === 'chef'){
+
+    list = list.filter(
+      d => d.createur === meName
+    );
+
+  } else if(role === 'directeur'){
+
+    list = list.filter(
+      d => d.statut === 'valide_responsable'
+    );
+
+  }
+
+  return list;
+
+}
