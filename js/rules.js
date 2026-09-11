@@ -1,3 +1,10 @@
+import {
+  findRef,
+  idx,
+  findExceptionTaux,
+  fmtDate
+} from './utils.js';
+
 export const Rules = {
   // Détermine le taux applicable à une référence à la date de la facture
   tauxApplicable(ref, dateFacture){
