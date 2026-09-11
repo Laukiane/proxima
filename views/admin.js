@@ -1,4 +1,4 @@
-function viewAdmin(){
+export function viewAdmin(){
   const sections = [
     ['Utilisateurs & rôles','5 profils actifs · gestion des droits par module.'],
     ['Offres, Index & Taux exceptionnels','Paramétrage des taux, seuils et fenêtres de campagne — CRUD simulé dans ce prototype.'],
