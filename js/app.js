@@ -9,7 +9,7 @@ import { viewClients } from '../views/clients.js';
 import { viewDossiers } from '../views/dossiers.js';
 import { viewWizard } from '../views/wizard.js';
 import { visibleDossiers } from './utils.js';
-
+import { dossierTable } from './utils.js';
 
 console.log("STATE =", state);
 console.log("NB CLIENTS =", CLIENTS.length);
@@ -23,3 +23,4 @@ console.log("CLIENTS VIEW =", viewClients);
 console.log("DOSSIERS VIEW =", viewDossiers);
 console.log("WIZARD VIEW =", viewWizard);
 console.log("VISIBLE DOSSIERS =", visibleDossiers);
+console.log("DOSSIER TABLE =", dossierTable);
