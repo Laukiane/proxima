@@ -2,6 +2,11 @@ import { state } from '../js/state.js';
 import { CLIENTS } from '../data/clients.js';
 import { OFFRES } from '../data/offres.js';
 import { GAINS } from '../data/gains.js';
+import {
+  currentUserName,
+  visibleDossiers,
+  dossierTable
+} from '../js/utils.js';
 
 export function viewDashboard(){
   const role = state.role;
