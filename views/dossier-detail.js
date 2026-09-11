@@ -1,3 +1,15 @@
+import { state } from '../js/state.js';
+import { DOSSIERS } from '../data/dossiers.js';
+import { STATUT_LABELS } from '../data/statuts.js';
+
+import {
+  currentUserName,
+  findClient,
+  fmtEUR,
+  fmtDate,
+  esc
+} from '../js/utils.js';
+
 export function viewDossierDetail(num){
   const d = DOSSIERS.find(x=>x.num===num);
   if(!d) return `<p>Dossier introuvable.</p>`;
