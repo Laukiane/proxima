@@ -1,4 +1,4 @@
-function viewDossierDetail(num){
+export function viewDossierDetail(num){
   const d = DOSSIERS.find(x=>x.num===num);
   if(!d) return `<p>Dossier introuvable.</p>`;
   if(d.statut==='brouillon' && d.createur!==currentUserName()){
