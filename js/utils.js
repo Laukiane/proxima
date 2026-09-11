@@ -1,5 +1,6 @@
 import { state } from './state.js';
 import { ROLES } from '../data/roles.js';
+import { DOSSIERS } from '../data/dossiers.js';
 
 function fmtEUR(n){
   return (Math.round(n*100)/100)
