@@ -1,9 +1,13 @@
 export function registerEvents(){
 
-  console.log('EVENTS OK');
-
   document.addEventListener('click', (e)=>{
-    console.log('CLICK');
+
+    const t = e.target;
+
+    if(t.dataset.navTo){
+      console.log('NAV TO =', t.dataset.navTo);
+    }
+
   });
 
 }
