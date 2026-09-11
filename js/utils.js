@@ -1,6 +1,7 @@
 import { state } from './state.js';
 import { ROLES } from '../data/roles.js';
 import { DOSSIERS } from '../data/dossiers.js';
+import { STATUT_LABELS } from '../data/statuts.js';
 
 function fmtEUR(n){
   return (Math.round(n*100)/100)
