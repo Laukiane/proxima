@@ -1,4 +1,4 @@
-function viewWizard(){
+export function viewWizard(){
   const w = state.wizard;
   if(!w) return `<p>Aucun dossier en cours de création.</p>`;
   let c = w.clientId ? findClient(w.clientId) : null;
