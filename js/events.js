@@ -53,6 +53,17 @@ export function registerEvents() {
       printDossier(actionButton.dataset.num);
     }
 
+    if (actionButton?.dataset.action === 'view-gain-doc') {
+      console.log('VIEW GAIN DOC');
+
+      const d = DOSSIERS.find(x => x.num === actionButton.dataset.num);
+      const doc = d && d.documents[Number(actionButton.dataset.doc)];
+
+      if (doc) {
+        openGainDocPreviewModal(doc);
+      }
+    }
+
     if (actionButton?.dataset.action === 'save-draft') {
       console.log('SAVE DRAFT MIGRATION OK');
     }
