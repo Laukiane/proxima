@@ -21,6 +21,12 @@ export function registerEvents() {
       nav('dossierDetail', { dossierDetailNum: dossierRow.dataset.openDossier });
     }
 
+    const workflowButton = e.target.closest('[data-workflow]');
+
+    if (workflowButton) {
+      console.log('WORKFLOW', workflowButton.dataset.workflow, workflowButton.dataset.num);
+    }
+
     const actionButton = e.target.closest('[data-action]');
 
     if (actionButton?.dataset.action === 'new-dossier') {
