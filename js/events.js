@@ -36,6 +36,18 @@ export function registerEvents(){
 
     }
 
+    const dossierRow =
+      e.target.closest('[data-open-dossier]');
+
+    if(dossierRow){
+
+      console.log(
+        'OPEN DOSSIER =',
+        dossierRow.dataset.openDossier
+      );
+
+    }
+
   });
 
 }
