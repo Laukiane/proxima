@@ -1,3 +1,5 @@
+import { state } from './state.js';
+
 export function registerEvents() {
   document.addEventListener('click', (e) => {
     const navItem = e.target.closest('[data-nav]');
@@ -82,19 +84,4 @@ export function registerEvents() {
       correctDossier(actionButton.dataset.num);
     }
 
-    if (actionButton?.dataset.action === 'resume-draft') {
-      console.log('RESUME DRAFT', actionButton.dataset.num);
-      resumeDraft(actionButton.dataset.num);
-    }
-
-    if (e.target.dataset.closeModal !== undefined) {
-      console.log('CLOSE MODAL');
-      closeModal();
-    }
-
-    if (e.target.id === 'modal-overlay') {
-      console.log('OVERLAY CLOSE');
-      closeModal();
-    }
-  });
-}
+    if (
