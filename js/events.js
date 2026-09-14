@@ -91,9 +91,9 @@ export function registerEvents() {
       actionButton.dataset.action === 'save-draft'
     ) {
 
-      console.log('SAVE DRAFT');
-
-      submitWizardDossier(true);
+      console.log(
+        'SAVE DRAFT MIGRATION OK'
+      );
 
     }
 
