@@ -93,6 +93,8 @@ export function registerEvents() {
 
       console.log('SAVE DRAFT');
 
+      submitWizardDossier(true);
+
     }
 
   });
