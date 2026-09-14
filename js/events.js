@@ -86,6 +86,15 @@ export function registerEvents() {
 
     }
 
+    if (
+      actionButton &&
+      actionButton.dataset.action === 'save-draft'
+    ) {
+
+      console.log('SAVE DRAFT');
+
+    }
+
   });
 
 }
