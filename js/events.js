@@ -31,6 +31,8 @@ export function registerEvents() {
 
       if (workflowButton.dataset.commentRequired === '1') {
         openCommentModal(num, to);
+      } else {
+        console.log('WORKFLOW DIRECT', to, num);
       }
     }
 
