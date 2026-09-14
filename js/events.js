@@ -48,6 +48,11 @@ export function registerEvents() {
       startWizard(actionButton.dataset.client);
     }
 
+    if (actionButton?.dataset.action === 'print-dossier') {
+      console.log('PRINT DOSSIER', actionButton.dataset.num);
+      printDossier(actionButton.dataset.num);
+    }
+
     if (actionButton?.dataset.action === 'save-draft') {
       console.log('SAVE DRAFT MIGRATION OK');
     }
