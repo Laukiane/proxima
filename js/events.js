@@ -5,7 +5,7 @@ export function registerEvents(){
     const t = e.target.closest('[data-nav]');
 
     if(t){
-      console.log('NAV =', t.dataset.nav);
+      nav(t.dataset.nav);
     }
 
   });
