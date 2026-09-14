@@ -50,5 +50,10 @@ export function registerEvents() {
       console.log('CORRECT DOSSIER', actionButton.dataset.num);
       correctDossier(actionButton.dataset.num);
     }
+
+    if (actionButton?.dataset.action === 'resume-draft') {
+      console.log('RESUME DRAFT', actionButton.dataset.num);
+      resumeDraft(actionButton.dataset.num);
+    }
   });
 }
