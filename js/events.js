@@ -2,22 +2,38 @@ export function registerEvents(){
 
   document.addEventListener('click', (e)=>{
 
-    const t = e.target.closest('[data-nav]');
+    const navItem =
+      e.target.closest('[data-nav]');
 
-    if(t){
-      console.log('EVENT NAV =', t.dataset.nav);
+    if(navItem){
 
-      nav(t.dataset.nav);
+      console.log(
+        'EVENT NAV =',
+        navItem.dataset.nav
+      );
+
+      nav(navItem.dataset.nav);
+
     }
 
     const clientLink =
       e.target.closest('[data-open-client]');
 
     if(clientLink){
+
       console.log(
         'OPEN CLIENT =',
         clientLink.dataset.openClient
       );
+
+      nav(
+        'fiche',
+        {
+          ficheClientId:
+            clientLink.dataset.openClient
+        }
+      );
+
     }
 
   });
