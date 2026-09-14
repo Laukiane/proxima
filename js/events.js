@@ -97,6 +97,17 @@ export function registerEvents() {
 
     }
 
+    if (
+      actionButton &&
+      actionButton.dataset.action === 'submit-wizard'
+    ) {
+
+      console.log(
+        'SUBMIT WIZARD'
+      );
+
+    }
+
   });
 
 }
