@@ -119,6 +119,10 @@ export function registerEvents() {
         'CONFIRM SUBMIT WIZARD'
       );
 
+      closeModal();
+
+      submitWizardDossier(false);
+
     }
 
   });
