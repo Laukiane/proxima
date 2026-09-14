@@ -68,5 +68,15 @@ export function registerEvents() {
       console.log('RESUME DRAFT', actionButton.dataset.num);
       resumeDraft(actionButton.dataset.num);
     }
+
+    if (e.target.dataset.closeModal !== undefined) {
+      console.log('CLOSE MODAL');
+      closeModal();
+    }
+
+    if (e.target.id === 'modal-overlay') {
+      console.log('OVERLAY CLOSE');
+      closeModal();
+    }
   });
 }
