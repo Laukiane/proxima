@@ -64,11 +64,25 @@ export function registerEvents() {
       actionButton.dataset.action === 'new-dossier'
     ) {
 
-      console.log(
-        'NEW DOSSIER'
-      );
+      console.log('NEW DOSSIER');
 
       startWizard();
+
+    }
+
+    if (
+      actionButton &&
+      actionButton.dataset.action === 'new-dossier-for'
+    ) {
+
+      console.log(
+        'NEW DOSSIER FOR',
+        actionButton.dataset.client
+      );
+
+      startWizard(
+        actionButton.dataset.client
+      );
 
     }
 
