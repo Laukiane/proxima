@@ -56,6 +56,20 @@ export function registerEvents() {
 
     }
 
+    const actionButton =
+      e.target.closest('[data-action]');
+
+    if (
+      actionButton &&
+      actionButton.dataset.action === 'new-dossier'
+    ) {
+
+      console.log(
+        'NEW DOSSIER'
+      );
+
+    }
+
   });
 
 }
