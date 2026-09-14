@@ -1,11 +1,11 @@
-export function registerEvents(){
+export function registerEvents() {
 
-  document.addEventListener('click', (e)=>{
+  document.addEventListener('click', (e) => {
 
     const navItem =
       e.target.closest('[data-nav]');
 
-    if(navItem){
+    if (navItem) {
 
       console.log(
         'EVENT NAV =',
@@ -19,7 +19,7 @@ export function registerEvents(){
     const clientLink =
       e.target.closest('[data-open-client]');
 
-    if(clientLink){
+    if (clientLink) {
 
       console.log(
         'OPEN CLIENT =',
@@ -39,11 +39,19 @@ export function registerEvents(){
     const dossierRow =
       e.target.closest('[data-open-dossier]');
 
-    if(dossierRow){
+    if (dossierRow) {
 
       console.log(
         'OPEN DOSSIER =',
         dossierRow.dataset.openDossier
+      );
+
+      nav(
+        'dossierDetail',
+        {
+          dossierDetailNum:
+            dossierRow.dataset.openDossier
+        }
       );
 
     }
