@@ -116,12 +116,8 @@ export function registerEvents() {
     ) {
 
       console.log(
-        'CONFIRM SUBMIT WIZARD'
+        'CONFIRM SUBMIT WIZARD MIGRATION OK'
       );
-
-      closeModal();
-
-      submitWizardDossier(false);
 
     }
 
