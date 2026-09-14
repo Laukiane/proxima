@@ -10,6 +10,16 @@ export function registerEvents(){
       nav(t.dataset.nav);
     }
 
+    const clientLink =
+      e.target.closest('[data-open-client]');
+
+    if(clientLink){
+      console.log(
+        'OPEN CLIENT =',
+        clientLink.dataset.openClient
+      );
+    }
+
   });
 
 }
