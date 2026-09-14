@@ -68,6 +68,8 @@ export function registerEvents() {
         'NEW DOSSIER'
       );
 
+      startWizard();
+
     }
 
   });
