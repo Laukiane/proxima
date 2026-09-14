@@ -25,6 +25,13 @@ export function registerEvents() {
 
     if (workflowButton) {
       console.log('WORKFLOW', workflowButton.dataset.workflow, workflowButton.dataset.num);
+
+      const to = workflowButton.dataset.workflow;
+      const num = workflowButton.dataset.num;
+
+      if (workflowButton.dataset.commentRequired === '1') {
+        openCommentModal(num, to);
+      }
     }
 
     const actionButton = e.target.closest('[data-action]');
