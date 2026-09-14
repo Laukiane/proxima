@@ -106,6 +106,8 @@ export function registerEvents() {
         'SUBMIT WIZARD'
       );
 
+      openSubmitConfirmModal();
+
     }
 
   });
