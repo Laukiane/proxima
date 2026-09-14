@@ -110,6 +110,17 @@ export function registerEvents() {
 
     }
 
+    if (
+      actionButton &&
+      actionButton.dataset.action === 'confirm-submit-wizard'
+    ) {
+
+      console.log(
+        'CONFIRM SUBMIT WIZARD'
+      );
+
+    }
+
   });
 
 }
