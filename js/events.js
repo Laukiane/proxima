@@ -76,4 +76,41 @@ export function registerEvents() {
       console.log('SAVE DRAFT MIGRATION OK');
     }
 
- 
+    if (actionButton?.dataset.action === 'submit-wizard') {
+      console.log('SUBMIT WIZARD');
+      openSubmitConfirmModal();
+    }
+
+    if (actionButton?.dataset.action === 'confirm-submit-wizard') {
+      console.log('CONFIRM SUBMIT WIZARD MIGRATION OK');
+    }
+
+    if (actionButton?.dataset.action === 'correct-dossier') {
+      console.log('CORRECT DOSSIER', actionButton.dataset.num);
+      correctDossier(actionButton.dataset.num);
+    }
+
+    if (actionButton?.dataset.action === 'resume-draft') {
+      console.log('RESUME DRAFT', actionButton.dataset.num);
+      resumeDraft(actionButton.dataset.num);
+    }
+
+    if (e.target.dataset.wizardNext !== undefined) {
+      console.log('WIZARD NEXT');
+    }
+
+    if (e.target.dataset.wizardPrev !== undefined) {
+      console.log('WIZARD PREV');
+    }
+
+    if (e.target.dataset.closeModal !== undefined) {
+      console.log('CLOSE MODAL');
+      closeModal();
+    }
+
+    if (e.target.id === 'modal-overlay') {
+      console.log('OVERLAY CLOSE');
+      closeModal();
+    }
+  });
+}
