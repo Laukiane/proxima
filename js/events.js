@@ -84,4 +84,27 @@ export function registerEvents() {
       correctDossier(actionButton.dataset.num);
     }
 
-    if (
+    if (actionButton?.dataset.action === 'resume-draft') {
+      console.log('RESUME DRAFT', actionButton.dataset.num);
+      resumeDraft(actionButton.dataset.num);
+    }
+
+    if (e.target.dataset.wizardNext !== undefined) {
+      console.log('WIZARD NEXT');
+    }
+
+    if (e.target.dataset.wizardPrev !== undefined) {
+      console.log('WIZARD PREV');
+    }
+
+    if (e.target.dataset.closeModal !== undefined) {
+      console.log('CLOSE MODAL');
+      closeModal();
+    }
+
+    if (e.target.id === 'modal-overlay') {
+      console.log('OVERLAY CLOSE');
+      closeModal();
+    }
+  });
+}
