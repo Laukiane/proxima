@@ -115,10 +115,6 @@ export function registerEvents() {
       console.log('WIZARD PREV');
     }
 
-    if (e.target.id === 'participation-check') {
-      console.log('PARTICIPATION CHECK', e.target.checked);
-    }
-
     if (e.target.dataset.closeModal !== undefined) {
       console.log('CLOSE MODAL');
       closeModal();
@@ -127,6 +123,16 @@ export function registerEvents() {
     if (e.target.id === 'modal-overlay') {
       console.log('OVERLAY CLOSE');
       closeModal();
+    }
+  });
+
+  document.addEventListener('change', (e) => {
+    if (e.target.id === 'participation-check') {
+      console.log('PARTICIPATION CHANGE', e.target.checked);
+
+      if (state.wizard) {
+        state.wizard.participation = e.target.checked;
+      }
     }
   });
 }
