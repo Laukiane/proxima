@@ -136,12 +136,11 @@ export function registerEvents() {
     }
 
     if (e.target.dataset.gainCheck) {
-      console.log(
-        'GAIN CHECK',
-        e.target.dataset.gainCheck,
-        e.target.dataset.num,
-        e.target.checked
-      );
+      console.log('GAIN CHECK', e.target.dataset.gainCheck, e.target.dataset.num, e.target.checked);
+    }
+
+    if (e.target.id === 'ventes-import-input') {
+      console.log('VENTES IMPORT', e.target.files?.[0]?.name);
     }
   });
 }
