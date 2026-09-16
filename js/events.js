@@ -134,5 +134,14 @@ export function registerEvents() {
         state.wizard.participation = e.target.checked;
       }
     }
+
+    if (e.target.dataset.gainCheck) {
+      console.log(
+        'GAIN CHECK',
+        e.target.dataset.gainCheck,
+        e.target.dataset.num,
+        e.target.checked
+      );
+    }
   });
 }
