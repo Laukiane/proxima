@@ -121,4 +121,30 @@ export function registerEvents() {
     }
 
     if (e.target.id === 'modal-overlay') {
-      
+      console.log('OVERLAY CLOSE');
+      closeModal();
+    }
+  });
+
+  document.addEventListener('change', (e) => {
+    if (e.target.id === 'participation-check') {
+      console.log('PARTICIPATION CHANGE', e.target.checked);
+
+      if (state.wizard) {
+        state.wizard.participation = e.target.checked;
+      }
+    }
+
+    if (e.target.dataset.gainCheck) {
+      console.log('GAIN CHECK', e.target.dataset.gainCheck, e.target.dataset.num, e.target.checked);
+    }
+
+    if (e.target.id === 'ventes-import-input') {
+      console.log('VENTES IMPORT', e.target.files?.[0]?.name);
+    }
+
+    if (e.target.dataset.justifUpload) {
+      console.log('JUSTIF UPLOAD', e.target.dataset.justifUpload, e.target.files?.[0]?.name);
+    }
+  });
+}
