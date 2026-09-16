@@ -146,5 +146,9 @@ export function registerEvents() {
     if (e.target.dataset.justifUpload) {
       console.log('JUSTIF UPLOAD', e.target.dataset.justifUpload, e.target.files?.[0]?.name);
     }
+
+    if (e.target.dataset.gainDocUpload) {
+      console.log('GAIN DOC UPLOAD', e.target.dataset.gainDocUpload, e.target.files?.[0]?.name);
+    }
   });
 }
