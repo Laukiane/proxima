@@ -111,4 +111,22 @@ export function registerEvents() {
       console.log('WIZARD NEXT');
     }
 
-    if (e.
+    if (e.target.dataset.wizardPrev !== undefined) {
+      console.log('WIZARD PREV');
+    }
+
+    if (e.target.id === 'participation-check') {
+      console.log('PARTICIPATION CHECK', e.target.checked);
+    }
+
+    if (e.target.dataset.closeModal !== undefined) {
+      console.log('CLOSE MODAL');
+      closeModal();
+    }
+
+    if (e.target.id === 'modal-overlay') {
+      console.log('OVERLAY CLOSE');
+      closeModal();
+    }
+  });
+}
