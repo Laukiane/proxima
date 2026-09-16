@@ -29,4 +29,98 @@ export function registerEvents() {
       console.log('WORKFLOW', workflowButton.dataset.workflow, workflowButton.dataset.num);
 
       const to = workflowButton.dataset.workflow;
-  
+      const num = workflowButton.dataset.num;
+
+      if (workflowButton.dataset.commentRequired === '1') {
+        openCommentModal(num, to);
+      } else {
+        console.log('WORKFLOW DIRECT', to, num);
+      }
+    }
+
+    const gainCard = e.target.closest('[data-select-gain]');
+
+    if (gainCard) {
+      console.log('SELECT GAIN', gainCard.dataset.selectGain);
+    }
+
+    const wizardClientRow = e.target.closest('[data-select-wizard-client]');
+
+    if (wizardClientRow) {
+      console.log('SELECT WIZARD CLIENT', wizardClientRow.dataset.selectWizardClient);
+    }
+
+    const actionButton = e.target.closest('[data-action]');
+
+    if (actionButton?.dataset.action === 'new-dossier') {
+      console.log('NEW DOSSIER');
+      startWizard();
+    }
+
+    if (actionButton?.dataset.action === 'new-dossier-for') {
+      console.log('NEW DOSSIER FOR', actionButton.dataset.client);
+      startWizard(actionButton.dataset.client);
+    }
+
+    if (actionButton?.dataset.action === 'print-dossier') {
+      console.log('PRINT DOSSIER', actionButton.dataset.num);
+      printDossier(actionButton.dataset.num);
+    }
+
+    if (actionButton?.dataset.action === 'view-gain-doc') {
+      console.log('VIEW GAIN DOC');
+
+      const d = DOSSIERS.find(x => x.num === actionButton.dataset.num);
+      const doc = d && d.documents[Number(actionButton.dataset.doc)];
+
+      if (doc) {
+        openGainDocPreviewModal(doc);
+      }
+    }
+
+    if (actionButton?.dataset.action === 'save-draft') {
+      console.log('SAVE DRAFT MIGRATION OK');
+    }
+
+    if (actionButton?.dataset.action === 'submit-wizard') {
+      console.log('SUBMIT WIZARD');
+      openSubmitConfirmModal();
+    }
+
+    if (actionButton?.dataset.action === 'confirm-submit-wizard') {
+      console.log('CONFIRM SUBMIT WIZARD MIGRATION OK');
+    }
+
+    if (actionButton?.dataset.action === 'correct-dossier') {
+      console.log('CORRECT DOSSIER', actionButton.dataset.num);
+      correctDossier(actionButton.dataset.num);
+    }
+
+    if (actionButton?.dataset.action === 'resume-draft') {
+      console.log('RESUME DRAFT', actionButton.dataset.num);
+      resumeDraft(actionButton.dataset.num);
+    }
+
+    if (e.target.dataset.wizardNext !== undefined) {
+      console.log('WIZARD NEXT');
+    }
+
+    if (e.target.dataset.wizardPrev !== undefined) {
+      console.log('WIZARD PREV');
+    }
+
+    if (e.target.id === 'participation-check') {
+      console.log('PARTICIPATION CHECK', e.target.checked);
+    }
+
+    if (e.target.dataset.closeModal !== undefined) {
+      console.log('CLOSE MODAL');
+      closeModal();
+    }
+
+    if (e.target.id === 'modal-overlay') {
+      console.log('OVERLAY CLOSE');
+      closeModal();
+    }
+  });
+}
