@@ -50,6 +50,12 @@ export function registerEvents() {
       console.log('SELECT WIZARD CLIENT', wizardClientRow.dataset.selectWizardClient);
     }
 
+    const lineCheckbox = e.target.closest('[data-line]');
+
+    if (lineCheckbox) {
+      console.log('SELECT LINE', lineCheckbox.dataset.line);
+    }
+
     const actionButton = e.target.closest('[data-action]');
 
     if (actionButton?.dataset.action === 'new-dossier') {
@@ -105,22 +111,4 @@ export function registerEvents() {
       console.log('WIZARD NEXT');
     }
 
-    if (e.target.dataset.wizardPrev !== undefined) {
-      console.log('WIZARD PREV');
-    }
-
-    if (e.target.id === 'participation-check') {
-      console.log('PARTICIPATION CHECK', e.target.checked);
-    }
-
-    if (e.target.dataset.closeModal !== undefined) {
-      console.log('CLOSE MODAL');
-      closeModal();
-    }
-
-    if (e.target.id === 'modal-overlay') {
-      console.log('OVERLAY CLOSE');
-      closeModal();
-    }
-  });
-}
+    if (e.
