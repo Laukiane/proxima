@@ -1412,7 +1412,6 @@ document.addEventListener('click', (e)=>{
   const dossierRow = t.closest('[data-open-dossier]');
   if(dossierRow){ nav('dossierDetail', {dossierDetailNum: dossierRow.dataset.openDossier}); }
 
-  if(t.dataset.action==='new-dossier-for'){ startWizard(t.dataset.client); }
   if(t.dataset.action==='submit-wizard'){ openSubmitConfirmModal(); }
   if(t.dataset.action==='confirm-submit-wizard'){ closeModal(); submitWizardDossier(false); }
   if(t.dataset.action==='save-draft'){ submitWizardDossier(true); }
