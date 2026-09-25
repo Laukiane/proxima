@@ -1427,8 +1427,7 @@ document.addEventListener('click', (e)=>{
     const to = t.dataset.workflow, num = t.dataset.num;
     if(t.dataset.commentRequired==='1'){ openCommentModal(num, to); } else { applyWorkflow(num, to, ''); }
   }
-  if(t.dataset.closeModal!==undefined){ closeModal(); }
-  if(t.id==='modal-overlay'){ closeModal(); }
+
 
   if(t.dataset.wizardNext!==undefined){ state.wizard.step = Math.min(WSTEPS.length-1, state.wizard.step+1); renderView(); }
   if(t.dataset.wizardPrev!==undefined){ state.wizard.step = Math.max(0, state.wizard.step-1); renderView(); }
