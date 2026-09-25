@@ -1412,11 +1412,7 @@ document.addEventListener('click', (e)=>{
   if(t.dataset.action==='confirm-submit-wizard'){ closeModal(); submitWizardDossier(false); }
   if(t.dataset.action==='save-draft'){ submitWizardDossier(true); }
   if(t.dataset.action==='view-justif'){ openJustifPreviewModal(t.dataset.key); }
-  if(t.dataset.action==='view-gain-doc'){
-    const d = DOSSIERS.find(x=>x.num===t.dataset.num);
-    const doc = d && d.documents[Number(t.dataset.doc)];
-    if(doc) openGainDocPreviewModal(doc);
-  }
+  
   if(t.dataset.action==='view-dossier-justif'){
     const d = DOSSIERS.find(x=>x.num===t.dataset.num);
     const fichier = d && (d.justificatifsFichiers||{})[t.dataset.key];
