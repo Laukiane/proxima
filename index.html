@@ -1436,9 +1436,9 @@ document.addEventListener('click', (e)=>{
   if(gainCard){
     const id = gainCard.dataset.selectGain;
     const i = state.wizard.gains.indexOf(id);
-    if(i===-1) state.wizard.gains.push(id); else state.wizard.gains.splice(i,1);
-    renderView();
-  }
+  if(i===-1) state.wizard.gains.push(id); else state.wizard.gains.splice(i,1);
+  renderView();
+}
 
 document.addEventListener('change', (e)=>{
   const t = e.target;
