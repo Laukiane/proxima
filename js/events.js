@@ -73,6 +73,16 @@ export function registerEvents() {
       printDossier(actionButton.dataset.num);
     }
 
+    if (actionButton?.dataset.action === 'download-ventes-template') {
+      console.log('DOWNLOAD VENTES TEMPLATE');
+      downloadVentesTemplate();
+    }
+
+    if (actionButton?.dataset.action === 'reset-ventes') {
+      console.log('RESET VENTES');
+      resetVentesDefaut();
+    }
+
     if (actionButton?.dataset.action === 'view-gain-doc') {
       console.log('VIEW GAIN DOC');
 
@@ -136,7 +146,12 @@ export function registerEvents() {
     }
 
     if (e.target.dataset.gainCheck) {
-      console.log('GAIN CHECK', e.target.dataset.gainCheck, e.target.dataset.num, e.target.checked);
+      console.log(
+        'GAIN CHECK',
+        e.target.dataset.gainCheck,
+        e.target.dataset.num,
+        e.target.checked
+      );
     }
 
     if (e.target.id === 'ventes-import-input') {
@@ -144,11 +159,19 @@ export function registerEvents() {
     }
 
     if (e.target.dataset.justifUpload) {
-      console.log('JUSTIF UPLOAD', e.target.dataset.justifUpload, e.target.files?.[0]?.name);
+      console.log(
+        'JUSTIF UPLOAD',
+        e.target.dataset.justifUpload,
+        e.target.files?.[0]?.name
+      );
     }
 
     if (e.target.dataset.gainDocUpload) {
-      console.log('GAIN DOC UPLOAD', e.target.dataset.gainDocUpload, e.target.files?.[0]?.name);
+      console.log(
+        'GAIN DOC UPLOAD',
+        e.target.dataset.gainDocUpload,
+        e.target.files?.[0]?.name
+      );
     }
   });
 }
