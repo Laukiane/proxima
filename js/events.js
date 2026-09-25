@@ -130,27 +130,27 @@ export function registerEvents() {
       resumeDraft(actionButton.dataset.num);
     }
 
-    if (e.target.dataset.wizardNext !== undefined && state.wizard) {
-      console.log('WIZARD NEXT');
+if (e.target.dataset.wizardNext !== undefined && state.wizard) {
+  console.log('WIZARD NEXT');
 
-      state.wizard.step = Math.min(
-        WSTEPS.length - 1,
-        state.wizard.step + 1
-      );
+  state.wizard.step = Math.min(
+    WSTEPS.length - 1,
+    state.wizard.step + 1
+  );
 
-      renderView();
-    }
+  renderView();
+}
 
-    if (e.target.dataset.wizardPrev !== undefined && state.wizard) {
-      console.log('WIZARD PREV');
+if (e.target.dataset.wizardPrev !== undefined && state.wizard) {
+  console.log('WIZARD PREV');
 
-      state.wizard.step = Math.max(
-        0,
-        state.wizard.step - 1
-      );
+  state.wizard.step = Math.max(
+    0,
+    state.wizard.step - 1
+  );
 
-      renderView();
-    }
+  renderView();
+}
 
     if (e.target.dataset.closeModal !== undefined) {
       console.log('CLOSE MODAL');
