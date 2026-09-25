@@ -46,8 +46,11 @@ export function registerEvents() {
 
     const wizardClientRow = e.target.closest('[data-select-wizard-client]');
 
-    if (wizardClientRow) {
+    if (wizardClientRow && state.wizard) {
       console.log('SELECT WIZARD CLIENT', wizardClientRow.dataset.selectWizardClient);
+
+      state.wizard.clientId = wizardClientRow.dataset.selectWizardClient;
+      renderView();
     }
 
     const lineCheckbox = e.target.closest('[data-line]');
@@ -94,6 +97,16 @@ export function registerEvents() {
       }
     }
 
+    if (actionButton?.dataset.action === 'change-wizard-client') {
+      console.log('CHANGE WIZARD CLIENT');
+
+      if (state.wizard) {
+        state.wizard.clientId = null;
+        state.wizard.clientSearchQuery = '';
+        renderView();
+      }
+    }
+
     if (actionButton?.dataset.action === 'save-draft') {
       console.log('SAVE DRAFT MIGRATION OK');
     }
@@ -113,65 +126,4 @@ export function registerEvents() {
     }
 
     if (actionButton?.dataset.action === 'resume-draft') {
-      console.log('RESUME DRAFT', actionButton.dataset.num);
-      resumeDraft(actionButton.dataset.num);
-    }
-
-    if (e.target.dataset.wizardNext !== undefined) {
-      console.log('WIZARD NEXT');
-    }
-
-    if (e.target.dataset.wizardPrev !== undefined) {
-      console.log('WIZARD PREV');
-    }
-
-    if (e.target.dataset.closeModal !== undefined) {
-      console.log('CLOSE MODAL');
-      closeModal();
-    }
-
-    if (e.target.id === 'modal-overlay') {
-      console.log('OVERLAY CLOSE');
-      closeModal();
-    }
-  });
-
-  document.addEventListener('change', (e) => {
-    if (e.target.id === 'participation-check') {
-      console.log('PARTICIPATION CHANGE', e.target.checked);
-
-      if (state.wizard) {
-        state.wizard.participation = e.target.checked;
-      }
-    }
-
-    if (e.target.dataset.gainCheck) {
-      console.log(
-        'GAIN CHECK',
-        e.target.dataset.gainCheck,
-        e.target.dataset.num,
-        e.target.checked
-      );
-    }
-
-    if (e.target.id === 'ventes-import-input') {
-      console.log('VENTES IMPORT', e.target.files?.[0]?.name);
-    }
-
-    if (e.target.dataset.justifUpload) {
-      console.log(
-        'JUSTIF UPLOAD',
-        e.target.dataset.justifUpload,
-        e.target.files?.[0]?.name
-      );
-    }
-
-    if (e.target.dataset.gainDocUpload) {
-      console.log(
-        'GAIN DOC UPLOAD',
-        e.target.dataset.gainDocUpload,
-        e.target.files?.[0]?.name
-      );
-    }
-  });
-}
+      console.log('RESUME DRAFT', actionButton.
