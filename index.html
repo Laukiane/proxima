@@ -1407,7 +1407,6 @@ function bindGlobalActions(){}
 document.addEventListener('click', (e)=>{
   const t = e.target;
 
-  if(t.dataset.navTo){ nav(t.dataset.navTo); }
 
 
   if(t.dataset.action==='confirm-submit-wizard'){ closeModal(); submitWizardDossier(false); }
