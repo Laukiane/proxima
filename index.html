@@ -1443,6 +1443,35 @@ if(gainCard){
   renderView();
 }
 
+if(t.dataset.action==='change-wizard-client'){
+  state.wizard.clientId = null;
+  state.wizard.clientSearchQuery='';
+  renderView();
+}
+
+const wcRow = t.closest('[data-select-wizard-client]');
+
+if(wcRow){
+  state.wizard.clientId = wcRow.dataset.selectWizardClient;
+  renderView();
+}
+
+if(t.dataset.wizardNext!==undefined){
+  state.wizard.step = Math.min(
+    WSTEPS.length - 1,
+    state.wizard.step + 1
+  );
+  renderView();
+}
+
+if(t.dataset.wizardPrev!==undefined){
+  state.wizard.step = Math.max(
+    0,
+    state.wizard.step - 1
+  );
+  renderView();
+}
+
 });
 
 document.addEventListener('change', (e)=>{
