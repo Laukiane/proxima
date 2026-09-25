@@ -1417,7 +1417,6 @@ document.addEventListener('click', (e)=>{
   if(t.dataset.action==='submit-wizard'){ openSubmitConfirmModal(); }
   if(t.dataset.action==='confirm-submit-wizard'){ closeModal(); submitWizardDossier(false); }
   if(t.dataset.action==='save-draft'){ submitWizardDossier(true); }
-  if(t.dataset.action==='resume-draft'){ resumeDraft(t.dataset.num); }
   if(t.dataset.action==='view-justif'){ openJustifPreviewModal(t.dataset.key); }
   if(t.dataset.action==='view-gain-doc'){
     const d = DOSSIERS.find(x=>x.num===t.dataset.num);
