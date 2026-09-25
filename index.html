@@ -1408,7 +1408,6 @@ document.addEventListener('click', (e)=>{
   const t = e.target;
 
   if(t.dataset.navTo){ nav(t.dataset.navTo); }
-  if(t.dataset.openClient){ nav('fiche', {ficheClientId:t.dataset.openClient}); }
   const dossierRow = t.closest('[data-open-dossier]');
   if(dossierRow){ nav('dossierDetail', {dossierDetailNum: dossierRow.dataset.openDossier}); }
 
