@@ -1407,7 +1407,9 @@ function bindGlobalActions(){}
 document.addEventListener('click', (e)=>{
   const t = e.target;
 
-
+  if(t.dataset.action==='view-justif'){
+  openJustifPreviewModal(t.dataset.key);
+  }
 
   if(t.dataset.action==='confirm-submit-wizard'){ closeModal(); submitWizardDossier(false); }
   if(t.dataset.action==='save-draft'){ submitWizardDossier(true); }
