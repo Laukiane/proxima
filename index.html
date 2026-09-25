@@ -1440,11 +1440,6 @@ document.addEventListener('click', (e)=>{
     renderView();
   }
 
-  if(t.dataset.action==='change-wizard-client'){ state.wizard.clientId = null; state.wizard.clientSearchQuery=''; renderView(); }
-  const wcRow = t.closest('[data-select-wizard-client]');
-  if(wcRow){ state.wizard.clientId = wcRow.dataset.selectWizardClient; renderView(); }
-});
-
 document.addEventListener('change', (e)=>{
   const t = e.target;
   if(t.id==='client-search-input'){ state.clientSearch = t.value; renderView(); }
