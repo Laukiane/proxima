@@ -1441,8 +1441,6 @@ document.addEventListener('click', (e)=>{
   }
 
   if(t.dataset.action==='change-wizard-client'){ state.wizard.clientId = null; state.wizard.clientSearchQuery=''; renderView(); }
-  if(t.dataset.action==='download-ventes-template'){ downloadVentesTemplate(); }
-  if(t.dataset.action==='reset-ventes'){ resetVentesDefaut(); }
   const wcRow = t.closest('[data-select-wizard-client]');
   if(wcRow){ state.wizard.clientId = wcRow.dataset.selectWizardClient; renderView(); }
 });
