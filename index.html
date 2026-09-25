@@ -1414,7 +1414,6 @@ document.addEventListener('click', (e)=>{
 
   if(t.dataset.action==='new-dossier'){ startWizard(); }
   if(t.dataset.action==='new-dossier-for'){ startWizard(t.dataset.client); }
-  if(t.dataset.action==='print-dossier'){ printDossier(t.dataset.num); }
   if(t.dataset.action==='submit-wizard'){ openSubmitConfirmModal(); }
   if(t.dataset.action==='confirm-submit-wizard'){ closeModal(); submitWizardDossier(false); }
   if(t.dataset.action==='save-draft'){ submitWizardDossier(true); }
