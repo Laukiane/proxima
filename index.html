@@ -1429,9 +1429,6 @@ document.addEventListener('click', (e)=>{
   }
 
 
-  if(t.dataset.wizardNext!==undefined){ state.wizard.step = Math.min(WSTEPS.length-1, state.wizard.step+1); renderView(); }
-  if(t.dataset.wizardPrev!==undefined){ state.wizard.step = Math.max(0, state.wizard.step-1); renderView(); }
-
 const gainCard = t.closest('[data-select-gain]');
 if(gainCard){
   const id = gainCard.dataset.selectGain;
