@@ -1424,8 +1424,11 @@ document.addEventListener('click', (e)=>{
   }
 
   if(t.dataset.workflow){
-    const to = t.dataset.workflow, num = t.dataset.num;
-    if(t.dataset.commentRequired==='1'){ openCommentModal(num, to); } else { applyWorkflow(num, to, ''); }
+  const to = t.dataset.workflow, num = t.dataset.num;
+  if(t.dataset.commentRequired==='1'){
+    openCommentModal(num, to);
+  } else {
+    applyWorkflow(num, to, ''); }
   }
 
 
