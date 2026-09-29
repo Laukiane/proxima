@@ -46,24 +46,11 @@ export function registerEvents() {
 
     const gainCard = e.target.closest('[data-select-gain]');
 
-    if (gainCard && state.wizard) {
-  console.log('SELECT GAIN', gainCard.dataset.selectGain);
+    if (gainCard) {
+      console.log('SELECT GAIN', gainCard.dataset.selectGain);
+    }
 
-  const id = gainCard.dataset.selectGain;
-  const i = state.wizard.gains.indexOf(id);
-
-  if (i === -1) {
-    state.wizard.gains.push(id);
-  } else {
-    state.wizard.gains.splice(i, 1);
-  }
-
-  renderView();
-}
-
-    const wizardClientRow = e.target.closest(
-      '[data-select-wizard-client]'
-    );
+    const wizardClientRow = e.target.closest('[data-select-wizard-client]');
 
     if (wizardClientRow) {
       console.log(
@@ -75,10 +62,7 @@ export function registerEvents() {
     const lineCheckbox = e.target.closest('[data-line]');
 
     if (lineCheckbox) {
-      console.log(
-        'SELECT LINE',
-        lineCheckbox.dataset.line
-      );
+      console.log('SELECT LINE', lineCheckbox.dataset.line);
     }
 
     const actionButton = e.target.closest('[data-action]');
@@ -106,26 +90,17 @@ export function registerEvents() {
       printDossier(actionButton.dataset.num);
     }
 
-    if (
-      actionButton?.dataset.action ===
-      'download-ventes-template'
-    ) {
+    if (actionButton?.dataset.action === 'download-ventes-template') {
       console.log('DOWNLOAD VENTES TEMPLATE');
       downloadVentesTemplate();
     }
 
-    if (
-      actionButton?.dataset.action ===
-      'reset-ventes'
-    ) {
+    if (actionButton?.dataset.action === 'reset-ventes') {
       console.log('RESET VENTES');
       resetVentesDefaut();
     }
 
-    if (
-      actionButton?.dataset.action ===
-      'view-gain-doc'
-    ) {
+    if (actionButton?.dataset.action === 'view-gain-doc') {
       console.log('VIEW GAIN DOC');
 
       const d = DOSSIERS.find(
@@ -143,47 +118,24 @@ export function registerEvents() {
       }
     }
 
-if (
-  actionButton?.dataset.action ===
-  'change-wizard-client'
-) {
-  console.log('CHANGE WIZARD CLIENT');
+    if (actionButton?.dataset.action === 'change-wizard-client') {
+      console.log('CHANGE WIZARD CLIENT');
+    }
 
-  if (state.wizard) {
-    state.wizard.clientId = null;
-    state.wizard.clientSearchQuery = '';
-    renderView();
-  }
-}
-
-    if (
-      actionButton?.dataset.action ===
-      'save-draft'
-    ) {
+    if (actionButton?.dataset.action === 'save-draft') {
       console.log('SAVE DRAFT MIGRATION OK');
     }
 
-    if (
-      actionButton?.dataset.action ===
-      'submit-wizard'
-    ) {
+    if (actionButton?.dataset.action === 'submit-wizard') {
       console.log('SUBMIT WIZARD');
       openSubmitConfirmModal();
     }
 
-    if (
-      actionButton?.dataset.action ===
-      'confirm-submit-wizard'
-    ) {
-      console.log(
-        'CONFIRM SUBMIT WIZARD MIGRATION OK'
-      );
+    if (actionButton?.dataset.action === 'confirm-submit-wizard') {
+      console.log('CONFIRM SUBMIT WIZARD MIGRATION OK');
     }
 
-    if (
-      actionButton?.dataset.action ===
-      'correct-dossier'
-    ) {
+    if (actionButton?.dataset.action === 'correct-dossier') {
       console.log(
         'CORRECT DOSSIER',
         actionButton.dataset.num
@@ -192,10 +144,7 @@ if (
       correctDossier(actionButton.dataset.num);
     }
 
-    if (
-      actionButton?.dataset.action ===
-      'resume-draft'
-    ) {
+    if (actionButton?.dataset.action === 'resume-draft') {
       console.log(
         'RESUME DRAFT',
         actionButton.dataset.num
@@ -204,21 +153,15 @@ if (
       resumeDraft(actionButton.dataset.num);
     }
 
-    if (
-      e.target.dataset.wizardNext !== undefined
-    ) {
+    if (e.target.dataset.wizardNext !== undefined) {
       console.log('WIZARD NEXT');
     }
 
-    if (
-      e.target.dataset.wizardPrev !== undefined
-    ) {
+    if (e.target.dataset.wizardPrev !== undefined) {
       console.log('WIZARD PREV');
     }
 
-    if (
-      e.target.dataset.closeModal !== undefined
-    ) {
+    if (e.target.dataset.closeModal !== undefined) {
       console.log('CLOSE MODAL');
       closeModal();
     }
