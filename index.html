@@ -1414,19 +1414,33 @@ document.addEventListener('click', (e)=>{
   if(t.dataset.action==='confirm-submit-wizard'){ closeModal(); submitWizardDossier(false); }
   if(t.dataset.action==='save-draft'){ submitWizardDossier(true); }
   
-  if(t.dataset.action==='view-dossier-justif'){
+if(t.dataset.action==='view-dossier-justif'){
     const d = DOSSIERS.find(x=>x.num===t.dataset.num);
     const fichier = d && (d.justificatifsFichiers||{})[t.dataset.key];
     if(fichier) renderFilePreviewModal(fichier.name, fichier.type, fichier.url);
-  }
+}
 
-  if(t.dataset.workflow){
+if(t.dataset.workflow){
   const to = t.dataset.workflow, num = t.dataset.num;
   if(t.dataset.commentRequired==='1'){
     openCommentModal(num, to);
   } else {
     applyWorkflow(num, to, ''); }
+}
+
+const gainCard = t.closest('[data-select-gain]');
+if(gainCard){
+  const id = gainCard.dataset.selectGain;
+  const i = state.wizard.gains.indexOf(id);
+
+  if(i===-1){
+    state.wizard.gains.push(id);
+  } else {
+    state.wizard.gains.splice(i,1);
   }
+
+  renderView();
+}
 
 if(t.dataset.action==='change-wizard-client'){
   state.wizard.clientId = null;
