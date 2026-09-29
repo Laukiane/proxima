@@ -1442,12 +1442,6 @@ if(gainCard){
   renderView();
 }
 
-if(t.dataset.action==='change-wizard-client'){
-  state.wizard.clientId = null;
-  state.wizard.clientSearchQuery='';
-  renderView();
-}
-
 const wcRow = t.closest('[data-select-wizard-client]');
 
 if(wcRow){
