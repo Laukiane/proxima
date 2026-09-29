@@ -46,12 +46,20 @@ export function registerEvents() {
 
     const gainCard = e.target.closest('[data-select-gain]');
 
-    if (gainCard) {
-      console.log(
-        'SELECT GAIN',
-        gainCard.dataset.selectGain
-      );
-    }
+    if (gainCard && state.wizard) {
+  console.log('SELECT GAIN', gainCard.dataset.selectGain);
+
+  const id = gainCard.dataset.selectGain;
+  const i = state.wizard.gains.indexOf(id);
+
+  if (i === -1) {
+    state.wizard.gains.push(id);
+  } else {
+    state.wizard.gains.splice(i, 1);
+  }
+
+  renderView();
+}
 
     const wizardClientRow = e.target.closest(
       '[data-select-wizard-client]'
