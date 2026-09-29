@@ -143,12 +143,18 @@ export function registerEvents() {
       }
     }
 
-    if (
-      actionButton?.dataset.action ===
-      'change-wizard-client'
-    ) {
-      console.log('CHANGE WIZARD CLIENT');
-    }
+if (
+  actionButton?.dataset.action ===
+  'change-wizard-client'
+) {
+  console.log('CHANGE WIZARD CLIENT');
+
+  if (state.wizard) {
+    state.wizard.clientId = null;
+    state.wizard.clientSearchQuery = '';
+    renderView();
+  }
+}
 
     if (
       actionButton?.dataset.action ===
