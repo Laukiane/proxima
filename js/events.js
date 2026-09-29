@@ -20,13 +20,19 @@ export function registerEvents() {
 
     if (dossierRow) {
       console.log('OPEN DOSSIER =', dossierRow.dataset.openDossier);
-      nav('dossierDetail', { dossierDetailNum: dossierRow.dataset.openDossier });
+      nav('dossierDetail', {
+        dossierDetailNum: dossierRow.dataset.openDossier
+      });
     }
 
     const workflowButton = e.target.closest('[data-workflow]');
 
     if (workflowButton) {
-      console.log('WORKFLOW', workflowButton.dataset.workflow, workflowButton.dataset.num);
+      console.log(
+        'WORKFLOW',
+        workflowButton.dataset.workflow,
+        workflowButton.dataset.num
+      );
 
       const to = workflowButton.dataset.workflow;
       const num = workflowButton.dataset.num;
@@ -47,7 +53,10 @@ export function registerEvents() {
     const wizardClientRow = e.target.closest('[data-select-wizard-client]');
 
     if (wizardClientRow) {
-      console.log('SELECT WIZARD CLIENT', wizardClientRow.dataset.selectWizardClient);
+      console.log(
+        'SELECT WIZARD CLIENT',
+        wizardClientRow.dataset.selectWizardClient
+      );
     }
 
     const lineCheckbox = e.target.closest('[data-line]');
@@ -64,12 +73,20 @@ export function registerEvents() {
     }
 
     if (actionButton?.dataset.action === 'new-dossier-for') {
-      console.log('NEW DOSSIER FOR', actionButton.dataset.client);
+      console.log(
+        'NEW DOSSIER FOR',
+        actionButton.dataset.client
+      );
+
       startWizard(actionButton.dataset.client);
     }
 
     if (actionButton?.dataset.action === 'print-dossier') {
-      console.log('PRINT DOSSIER', actionButton.dataset.num);
+      console.log(
+        'PRINT DOSSIER',
+        actionButton.dataset.num
+      );
+
       printDossier(actionButton.dataset.num);
     }
 
@@ -86,8 +103,15 @@ export function registerEvents() {
     if (actionButton?.dataset.action === 'view-gain-doc') {
       console.log('VIEW GAIN DOC');
 
-      const d = DOSSIERS.find(x => x.num === actionButton.dataset.num);
-      const doc = d && d.documents[Number(actionButton.dataset.doc)];
+      const d = DOSSIERS.find(
+        x => x.num === actionButton.dataset.num
+      );
+
+      const doc =
+        d &&
+        d.documents[
+          Number(actionButton.dataset.doc)
+        ];
 
       if (doc) {
         openGainDocPreviewModal(doc);
@@ -96,12 +120,6 @@ export function registerEvents() {
 
     if (actionButton?.dataset.action === 'change-wizard-client') {
       console.log('CHANGE WIZARD CLIENT');
-
-      if (state.wizard) {
-        state.wizard.clientId = null;
-        state.wizard.clientSearchQuery = '';
-        renderView();
-      }
     }
 
     if (actionButton?.dataset.action === 'save-draft') {
@@ -114,16 +132,26 @@ export function registerEvents() {
     }
 
     if (actionButton?.dataset.action === 'confirm-submit-wizard') {
-      console.log('CONFIRM SUBMIT WIZARD MIGRATION OK');
+      console.log(
+        'CONFIRM SUBMIT WIZARD MIGRATION OK'
+      );
     }
 
     if (actionButton?.dataset.action === 'correct-dossier') {
-      console.log('CORRECT DOSSIER', actionButton.dataset.num);
+      console.log(
+        'CORRECT DOSSIER',
+        actionButton.dataset.num
+      );
+
       correctDossier(actionButton.dataset.num);
     }
 
     if (actionButton?.dataset.action === 'resume-draft') {
-      console.log('RESUME DRAFT', actionButton.dataset.num);
+      console.log(
+        'RESUME DRAFT',
+        actionButton.dataset.num
+      );
+
       resumeDraft(actionButton.dataset.num);
     }
 
@@ -148,10 +176,14 @@ export function registerEvents() {
 
   document.addEventListener('change', (e) => {
     if (e.target.id === 'participation-check') {
-      console.log('PARTICIPATION CHANGE', e.target.checked);
+      console.log(
+        'PARTICIPATION CHANGE',
+        e.target.checked
+      );
 
       if (state.wizard) {
-        state.wizard.participation = e.target.checked;
+        state.wizard.participation =
+          e.target.checked;
       }
     }
 
@@ -165,7 +197,10 @@ export function registerEvents() {
     }
 
     if (e.target.id === 'ventes-import-input') {
-      console.log('VENTES IMPORT', e.target.files?.[0]?.name);
+      console.log(
+        'VENTES IMPORT',
+        e.target.files?.[0]?.name
+      );
     }
 
     if (e.target.dataset.justifUpload) {
